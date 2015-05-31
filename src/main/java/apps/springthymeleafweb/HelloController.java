@@ -29,5 +29,10 @@ public class HelloController {
     model.addAttribute("name", name);
     return "hello";
     }
+    //handle page 404
+    @RequestMapping(value = "/**", method = RequestMethod.GET)
+    public String getMovie() {
+        return "in404";
+    }
     
 }
